@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "@/lib/router-compat";
 import { ArrowLeft, Download, Trash2, FileText, Search, Bell, XCircle, CheckCircle2 } from "lucide-react";
 import Badge from "../components/ui/Badge";
 import { artifactApi } from "../services/artifact.api";

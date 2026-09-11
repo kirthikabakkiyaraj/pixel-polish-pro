@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate } from '@/lib/router-compat';
 import { AuthContext } from '../../context/AuthContext';
 
 export default function ProtectedRoute({ children }) {

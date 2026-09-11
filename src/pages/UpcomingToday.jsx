@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/lib/router-compat";
 import { ArrowLeft } from "lucide-react";
 import Badge from "../components/ui/Badge";
 import { taskApi } from "../services/task.api";

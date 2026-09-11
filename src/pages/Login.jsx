@@ -1,5 +1,5 @@
 import { useState, useContext, useCallback } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link } from "@/lib/router-compat";
 import { Mail, Lock, ArrowRight, LayoutDashboard, Eye, EyeOff } from "lucide-react";
 import robotMascot from "../assets/robot-mascot.png";
 import { AuthContext } from "../context/AuthContext";

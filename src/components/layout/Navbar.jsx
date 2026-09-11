@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet } from '@/lib/router-compat';
 
 export default function Navbar() {
   return (

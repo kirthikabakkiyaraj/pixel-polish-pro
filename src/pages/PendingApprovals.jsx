@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "@/lib/router-compat";
 import { ArrowLeft, Bot, Search, Bell, XCircle, CheckCircle2 } from "lucide-react";
 import Badge from "../components/ui/Badge";
 import { approvalApi } from "../services/approval.api";
