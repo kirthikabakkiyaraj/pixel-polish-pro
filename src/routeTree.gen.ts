@@ -10,33 +10,347 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as RegisterRouteImport } from './routes/register'
+import { Route as AppActiveTasksRouteImport } from './routes/_app/active-tasks'
+import { Route as AppActivityRouteImport } from './routes/_app/activity'
+import { Route as AppAgentsRouteImport } from './routes/_app/agents'
+import { Route as AppAgentsRunningRouteImport } from './routes/_app/agents-running'
+import { Route as AppAnalyticsRouteImport } from './routes/_app/analytics'
+import { Route as AppApprovalsRouteImport } from './routes/_app/approvals'
+import { Route as AppArtifactsRouteImport } from './routes/_app/artifacts'
+import { Route as AppCompletedTodayRouteImport } from './routes/_app/completed-today'
+import { Route as AppDashboardRouteImport } from './routes/_app/dashboard'
+import { Route as AppExecutionsRouteImport } from './routes/_app/executions'
+import { Route as AppPendingApprovalsRouteImport } from './routes/_app/pending-approvals'
+import { Route as AppProfileRouteImport } from './routes/_app/profile'
+import { Route as AppResearchRouteImport } from './routes/_app/research'
+import { Route as AppSchedulesRouteImport } from './routes/_app/schedules'
+import { Route as AppSettingsRouteImport } from './routes/_app/settings'
+import { Route as AppUpcomingTodayRouteImport } from './routes/_app/upcoming-today'
+import { Route as AppUserGuideRouteImport } from './routes/_app/user-guide'
+import { Route as AppArtifactsIdRouteImport } from './routes/_app/artifacts/$id'
+import { Route as AppResearchIdRouteImport } from './routes/_app/research/$id'
+import { Route as AppTasksCreateRouteImport } from './routes/_app/tasks/create'
+import { Route as AppTasksIdIndexRouteImport } from './routes/_app/tasks/$id/index'
+import { Route as AppTasksIdLiveRouteImport } from './routes/_app/tasks/$id/live'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegisterRoute = RegisterRouteImport.update({
+  id: '/register',
+  path: '/register',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppActiveTasksRoute = AppActiveTasksRouteImport.update({
+  id: '/_app/active-tasks',
+  path: '/active-tasks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppActivityRoute = AppActivityRouteImport.update({
+  id: '/_app/activity',
+  path: '/activity',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppAgentsRoute = AppAgentsRouteImport.update({
+  id: '/_app/agents',
+  path: '/agents',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppAgentsRunningRoute = AppAgentsRunningRouteImport.update({
+  id: '/_app/agents-running',
+  path: '/agents-running',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppAnalyticsRoute = AppAnalyticsRouteImport.update({
+  id: '/_app/analytics',
+  path: '/analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppApprovalsRoute = AppApprovalsRouteImport.update({
+  id: '/_app/approvals',
+  path: '/approvals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppArtifactsRoute = AppArtifactsRouteImport.update({
+  id: '/_app/artifacts',
+  path: '/artifacts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppCompletedTodayRoute = AppCompletedTodayRouteImport.update({
+  id: '/_app/completed-today',
+  path: '/completed-today',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppDashboardRoute = AppDashboardRouteImport.update({
+  id: '/_app/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppExecutionsRoute = AppExecutionsRouteImport.update({
+  id: '/_app/executions',
+  path: '/executions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppPendingApprovalsRoute = AppPendingApprovalsRouteImport.update({
+  id: '/_app/pending-approvals',
+  path: '/pending-approvals',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppProfileRoute = AppProfileRouteImport.update({
+  id: '/_app/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppResearchRoute = AppResearchRouteImport.update({
+  id: '/_app/research',
+  path: '/research',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppSchedulesRoute = AppSchedulesRouteImport.update({
+  id: '/_app/schedules',
+  path: '/schedules',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppSettingsRoute = AppSettingsRouteImport.update({
+  id: '/_app/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppUpcomingTodayRoute = AppUpcomingTodayRouteImport.update({
+  id: '/_app/upcoming-today',
+  path: '/upcoming-today',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppUserGuideRoute = AppUserGuideRouteImport.update({
+  id: '/_app/user-guide',
+  path: '/user-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppArtifactsIdRoute = AppArtifactsIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => AppArtifactsRoute,
+} as any)
+const AppResearchIdRoute = AppResearchIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => AppResearchRoute,
+} as any)
+const AppTasksCreateRoute = AppTasksCreateRouteImport.update({
+  id: '/_app/tasks/create',
+  path: '/tasks/create',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppTasksIdIndexRoute = AppTasksIdIndexRouteImport.update({
+  id: '/_app/tasks/$id/',
+  path: '/tasks/$id/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppTasksIdLiveRoute = AppTasksIdLiveRouteImport.update({
+  id: '/_app/tasks/$id/live',
+  path: '/tasks/$id/live',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/login': typeof LoginRoute
+  '/register': typeof RegisterRoute
+  '/active-tasks': typeof AppActiveTasksRoute
+  '/activity': typeof AppActivityRoute
+  '/agents': typeof AppAgentsRoute
+  '/agents-running': typeof AppAgentsRunningRoute
+  '/analytics': typeof AppAnalyticsRoute
+  '/approvals': typeof AppApprovalsRoute
+  '/artifacts': typeof AppArtifactsRouteWithChildren
+  '/completed-today': typeof AppCompletedTodayRoute
+  '/dashboard': typeof AppDashboardRoute
+  '/executions': typeof AppExecutionsRoute
+  '/pending-approvals': typeof AppPendingApprovalsRoute
+  '/profile': typeof AppProfileRoute
+  '/research': typeof AppResearchRouteWithChildren
+  '/schedules': typeof AppSchedulesRoute
+  '/settings': typeof AppSettingsRoute
+  '/upcoming-today': typeof AppUpcomingTodayRoute
+  '/user-guide': typeof AppUserGuideRoute
+  '/artifacts/$id': typeof AppArtifactsIdRoute
+  '/research/$id': typeof AppResearchIdRoute
+  '/tasks/create': typeof AppTasksCreateRoute
+  '/tasks/$id/live': typeof AppTasksIdLiveRoute
+  '/tasks/$id/': typeof AppTasksIdIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/login': typeof LoginRoute
+  '/register': typeof RegisterRoute
+  '/active-tasks': typeof AppActiveTasksRoute
+  '/activity': typeof AppActivityRoute
+  '/agents': typeof AppAgentsRoute
+  '/agents-running': typeof AppAgentsRunningRoute
+  '/analytics': typeof AppAnalyticsRoute
+  '/approvals': typeof AppApprovalsRoute
+  '/artifacts': typeof AppArtifactsRouteWithChildren
+  '/completed-today': typeof AppCompletedTodayRoute
+  '/dashboard': typeof AppDashboardRoute
+  '/executions': typeof AppExecutionsRoute
+  '/pending-approvals': typeof AppPendingApprovalsRoute
+  '/profile': typeof AppProfileRoute
+  '/research': typeof AppResearchRouteWithChildren
+  '/schedules': typeof AppSchedulesRoute
+  '/settings': typeof AppSettingsRoute
+  '/upcoming-today': typeof AppUpcomingTodayRoute
+  '/user-guide': typeof AppUserGuideRoute
+  '/artifacts/$id': typeof AppArtifactsIdRoute
+  '/research/$id': typeof AppResearchIdRoute
+  '/tasks/create': typeof AppTasksCreateRoute
+  '/tasks/$id/live': typeof AppTasksIdLiveRoute
+  '/tasks/$id': typeof AppTasksIdIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/login': typeof LoginRoute
+  '/register': typeof RegisterRoute
+  '/_app/active-tasks': typeof AppActiveTasksRoute
+  '/_app/activity': typeof AppActivityRoute
+  '/_app/agents': typeof AppAgentsRoute
+  '/_app/agents-running': typeof AppAgentsRunningRoute
+  '/_app/analytics': typeof AppAnalyticsRoute
+  '/_app/approvals': typeof AppApprovalsRoute
+  '/_app/artifacts': typeof AppArtifactsRouteWithChildren
+  '/_app/completed-today': typeof AppCompletedTodayRoute
+  '/_app/dashboard': typeof AppDashboardRoute
+  '/_app/executions': typeof AppExecutionsRoute
+  '/_app/pending-approvals': typeof AppPendingApprovalsRoute
+  '/_app/profile': typeof AppProfileRoute
+  '/_app/research': typeof AppResearchRouteWithChildren
+  '/_app/schedules': typeof AppSchedulesRoute
+  '/_app/settings': typeof AppSettingsRoute
+  '/_app/upcoming-today': typeof AppUpcomingTodayRoute
+  '/_app/user-guide': typeof AppUserGuideRoute
+  '/_app/artifacts/$id': typeof AppArtifactsIdRoute
+  '/_app/research/$id': typeof AppResearchIdRoute
+  '/_app/tasks/create': typeof AppTasksCreateRoute
+  '/_app/tasks/$id/live': typeof AppTasksIdLiveRoute
+  '/_app/tasks/$id/': typeof AppTasksIdIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/login'
+    | '/register'
+    | '/active-tasks'
+    | '/activity'
+    | '/agents'
+    | '/agents-running'
+    | '/analytics'
+    | '/approvals'
+    | '/artifacts'
+    | '/completed-today'
+    | '/dashboard'
+    | '/executions'
+    | '/pending-approvals'
+    | '/profile'
+    | '/research'
+    | '/schedules'
+    | '/settings'
+    | '/upcoming-today'
+    | '/user-guide'
+    | '/artifacts/$id'
+    | '/research/$id'
+    | '/tasks/create'
+    | '/tasks/$id/live'
+    | '/tasks/$id/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/login'
+    | '/register'
+    | '/active-tasks'
+    | '/activity'
+    | '/agents'
+    | '/agents-running'
+    | '/analytics'
+    | '/approvals'
+    | '/artifacts'
+    | '/completed-today'
+    | '/dashboard'
+    | '/executions'
+    | '/pending-approvals'
+    | '/profile'
+    | '/research'
+    | '/schedules'
+    | '/settings'
+    | '/upcoming-today'
+    | '/user-guide'
+    | '/artifacts/$id'
+    | '/research/$id'
+    | '/tasks/create'
+    | '/tasks/$id/live'
+    | '/tasks/$id'
+  id:
+    | '__root__'
+    | '/'
+    | '/login'
+    | '/register'
+    | '/_app/active-tasks'
+    | '/_app/activity'
+    | '/_app/agents'
+    | '/_app/agents-running'
+    | '/_app/analytics'
+    | '/_app/approvals'
+    | '/_app/artifacts'
+    | '/_app/completed-today'
+    | '/_app/dashboard'
+    | '/_app/executions'
+    | '/_app/pending-approvals'
+    | '/_app/profile'
+    | '/_app/research'
+    | '/_app/schedules'
+    | '/_app/settings'
+    | '/_app/upcoming-today'
+    | '/_app/user-guide'
+    | '/_app/artifacts/$id'
+    | '/_app/research/$id'
+    | '/_app/tasks/create'
+    | '/_app/tasks/$id/live'
+    | '/_app/tasks/$id/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LoginRoute: typeof LoginRoute
+  RegisterRoute: typeof RegisterRoute
+  AppActiveTasksRoute: typeof AppActiveTasksRoute
+  AppActivityRoute: typeof AppActivityRoute
+  AppAgentsRoute: typeof AppAgentsRoute
+  AppAgentsRunningRoute: typeof AppAgentsRunningRoute
+  AppAnalyticsRoute: typeof AppAnalyticsRoute
+  AppApprovalsRoute: typeof AppApprovalsRoute
+  AppArtifactsRoute: typeof AppArtifactsRouteWithChildren
+  AppCompletedTodayRoute: typeof AppCompletedTodayRoute
+  AppDashboardRoute: typeof AppDashboardRoute
+  AppExecutionsRoute: typeof AppExecutionsRoute
+  AppPendingApprovalsRoute: typeof AppPendingApprovalsRoute
+  AppProfileRoute: typeof AppProfileRoute
+  AppResearchRoute: typeof AppResearchRouteWithChildren
+  AppSchedulesRoute: typeof AppSchedulesRoute
+  AppSettingsRoute: typeof AppSettingsRoute
+  AppUpcomingTodayRoute: typeof AppUpcomingTodayRoute
+  AppUserGuideRoute: typeof AppUserGuideRoute
+  AppTasksCreateRoute: typeof AppTasksCreateRoute
+  AppTasksIdLiveRoute: typeof AppTasksIdLiveRoute
+  AppTasksIdIndexRoute: typeof AppTasksIdIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +362,225 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/register': {
+      id: '/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof RegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/active-tasks': {
+      id: '/_app/active-tasks'
+      path: '/active-tasks'
+      fullPath: '/active-tasks'
+      preLoaderRoute: typeof AppActiveTasksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/activity': {
+      id: '/_app/activity'
+      path: '/activity'
+      fullPath: '/activity'
+      preLoaderRoute: typeof AppActivityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/agents': {
+      id: '/_app/agents'
+      path: '/agents'
+      fullPath: '/agents'
+      preLoaderRoute: typeof AppAgentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/agents-running': {
+      id: '/_app/agents-running'
+      path: '/agents-running'
+      fullPath: '/agents-running'
+      preLoaderRoute: typeof AppAgentsRunningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/analytics': {
+      id: '/_app/analytics'
+      path: '/analytics'
+      fullPath: '/analytics'
+      preLoaderRoute: typeof AppAnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/approvals': {
+      id: '/_app/approvals'
+      path: '/approvals'
+      fullPath: '/approvals'
+      preLoaderRoute: typeof AppApprovalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/artifacts': {
+      id: '/_app/artifacts'
+      path: '/artifacts'
+      fullPath: '/artifacts'
+      preLoaderRoute: typeof AppArtifactsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/completed-today': {
+      id: '/_app/completed-today'
+      path: '/completed-today'
+      fullPath: '/completed-today'
+      preLoaderRoute: typeof AppCompletedTodayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/dashboard': {
+      id: '/_app/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof AppDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/executions': {
+      id: '/_app/executions'
+      path: '/executions'
+      fullPath: '/executions'
+      preLoaderRoute: typeof AppExecutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/pending-approvals': {
+      id: '/_app/pending-approvals'
+      path: '/pending-approvals'
+      fullPath: '/pending-approvals'
+      preLoaderRoute: typeof AppPendingApprovalsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/profile': {
+      id: '/_app/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof AppProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/research': {
+      id: '/_app/research'
+      path: '/research'
+      fullPath: '/research'
+      preLoaderRoute: typeof AppResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/schedules': {
+      id: '/_app/schedules'
+      path: '/schedules'
+      fullPath: '/schedules'
+      preLoaderRoute: typeof AppSchedulesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/settings': {
+      id: '/_app/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof AppSettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/upcoming-today': {
+      id: '/_app/upcoming-today'
+      path: '/upcoming-today'
+      fullPath: '/upcoming-today'
+      preLoaderRoute: typeof AppUpcomingTodayRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/user-guide': {
+      id: '/_app/user-guide'
+      path: '/user-guide'
+      fullPath: '/user-guide'
+      preLoaderRoute: typeof AppUserGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/artifacts/$id': {
+      id: '/_app/artifacts/$id'
+      path: '/$id'
+      fullPath: '/artifacts/$id'
+      preLoaderRoute: typeof AppArtifactsIdRouteImport
+      parentRoute: typeof AppArtifactsRoute
+    }
+    '/_app/research/$id': {
+      id: '/_app/research/$id'
+      path: '/$id'
+      fullPath: '/research/$id'
+      preLoaderRoute: typeof AppResearchIdRouteImport
+      parentRoute: typeof AppResearchRoute
+    }
+    '/_app/tasks/create': {
+      id: '/_app/tasks/create'
+      path: '/tasks/create'
+      fullPath: '/tasks/create'
+      preLoaderRoute: typeof AppTasksCreateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/tasks/$id/': {
+      id: '/_app/tasks/$id/'
+      path: '/tasks/$id'
+      fullPath: '/tasks/$id/'
+      preLoaderRoute: typeof AppTasksIdIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/tasks/$id/live': {
+      id: '/_app/tasks/$id/live'
+      path: '/tasks/$id/live'
+      fullPath: '/tasks/$id/live'
+      preLoaderRoute: typeof AppTasksIdLiveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
+interface AppArtifactsRouteChildren {
+  AppArtifactsIdRoute: typeof AppArtifactsIdRoute
+}
+
+const AppArtifactsRouteChildren: AppArtifactsRouteChildren = {
+  AppArtifactsIdRoute: AppArtifactsIdRoute,
+}
+
+const AppArtifactsRouteWithChildren = AppArtifactsRoute._addFileChildren(
+  AppArtifactsRouteChildren,
+)
+
+interface AppResearchRouteChildren {
+  AppResearchIdRoute: typeof AppResearchIdRoute
+}
+
+const AppResearchRouteChildren: AppResearchRouteChildren = {
+  AppResearchIdRoute: AppResearchIdRoute,
+}
+
+const AppResearchRouteWithChildren = AppResearchRoute._addFileChildren(
+  AppResearchRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LoginRoute: LoginRoute,
+  RegisterRoute: RegisterRoute,
+  AppActiveTasksRoute: AppActiveTasksRoute,
+  AppActivityRoute: AppActivityRoute,
+  AppAgentsRoute: AppAgentsRoute,
+  AppAgentsRunningRoute: AppAgentsRunningRoute,
+  AppAnalyticsRoute: AppAnalyticsRoute,
+  AppApprovalsRoute: AppApprovalsRoute,
+  AppArtifactsRoute: AppArtifactsRouteWithChildren,
+  AppCompletedTodayRoute: AppCompletedTodayRoute,
+  AppDashboardRoute: AppDashboardRoute,
+  AppExecutionsRoute: AppExecutionsRoute,
+  AppPendingApprovalsRoute: AppPendingApprovalsRoute,
+  AppProfileRoute: AppProfileRoute,
+  AppResearchRoute: AppResearchRouteWithChildren,
+  AppSchedulesRoute: AppSchedulesRoute,
+  AppSettingsRoute: AppSettingsRoute,
+  AppUpcomingTodayRoute: AppUpcomingTodayRoute,
+  AppUserGuideRoute: AppUserGuideRoute,
+  AppTasksCreateRoute: AppTasksCreateRoute,
+  AppTasksIdLiveRoute: AppTasksIdLiveRoute,
+  AppTasksIdIndexRoute: AppTasksIdIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

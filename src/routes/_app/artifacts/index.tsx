@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import Artifacts from "@/pages/Artifacts";
 
-export const Route = createFileRoute("/_app/artifacts")({
+export const Route = createFileRoute("/_app/artifacts/")({
   head: () => ({
     meta: [
       { title: "Artifacts | Aether Platform" },

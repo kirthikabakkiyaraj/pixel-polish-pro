@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import ResearchResults from "@/pages/ResearchResults";
 
-export const Route = createFileRoute("/_app/research")({
+export const Route = createFileRoute("/_app/research/")({
   head: () => ({
     meta: [
       { title: "Research Results | Aether Platform" },
