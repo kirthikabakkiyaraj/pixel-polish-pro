@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AppRouteImport } from './routes/_app'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as RegisterRouteImport } from './routes/register'
 import { Route as AppActiveTasksRouteImport } from './routes/_app/active-tasks'
@@ -40,6 +41,10 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AppRoute = AppRouteImport.update({
+  id: '/_app',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LoginRoute = LoginRouteImport.update({
   id: '/login',
   path: '/login',
@@ -51,114 +56,114 @@ const RegisterRoute = RegisterRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const AppActiveTasksRoute = AppActiveTasksRouteImport.update({
-  id: '/_app/active-tasks',
+  id: '/active-tasks',
   path: '/active-tasks',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppActivityRoute = AppActivityRouteImport.update({
-  id: '/_app/activity',
+  id: '/activity',
   path: '/activity',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppAgentsRoute = AppAgentsRouteImport.update({
-  id: '/_app/agents',
+  id: '/agents',
   path: '/agents',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppAgentsRunningRoute = AppAgentsRunningRouteImport.update({
-  id: '/_app/agents-running',
+  id: '/agents-running',
   path: '/agents-running',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppAnalyticsRoute = AppAnalyticsRouteImport.update({
-  id: '/_app/analytics',
+  id: '/analytics',
   path: '/analytics',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppApprovalsRoute = AppApprovalsRouteImport.update({
-  id: '/_app/approvals',
+  id: '/approvals',
   path: '/approvals',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppCompletedTodayRoute = AppCompletedTodayRouteImport.update({
-  id: '/_app/completed-today',
+  id: '/completed-today',
   path: '/completed-today',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppDashboardRoute = AppDashboardRouteImport.update({
-  id: '/_app/dashboard',
+  id: '/dashboard',
   path: '/dashboard',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppExecutionsRoute = AppExecutionsRouteImport.update({
-  id: '/_app/executions',
+  id: '/executions',
   path: '/executions',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppPendingApprovalsRoute = AppPendingApprovalsRouteImport.update({
-  id: '/_app/pending-approvals',
+  id: '/pending-approvals',
   path: '/pending-approvals',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppProfileRoute = AppProfileRouteImport.update({
-  id: '/_app/profile',
+  id: '/profile',
   path: '/profile',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppSchedulesRoute = AppSchedulesRouteImport.update({
-  id: '/_app/schedules',
+  id: '/schedules',
   path: '/schedules',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppSettingsRoute = AppSettingsRouteImport.update({
-  id: '/_app/settings',
+  id: '/settings',
   path: '/settings',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppUpcomingTodayRoute = AppUpcomingTodayRouteImport.update({
-  id: '/_app/upcoming-today',
+  id: '/upcoming-today',
   path: '/upcoming-today',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppUserGuideRoute = AppUserGuideRouteImport.update({
-  id: '/_app/user-guide',
+  id: '/user-guide',
   path: '/user-guide',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppArtifactsIndexRoute = AppArtifactsIndexRouteImport.update({
-  id: '/_app/artifacts/',
+  id: '/artifacts/',
   path: '/artifacts/',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppArtifactsIdRoute = AppArtifactsIdRouteImport.update({
-  id: '/_app/artifacts/$id',
+  id: '/artifacts/$id',
   path: '/artifacts/$id',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppResearchIndexRoute = AppResearchIndexRouteImport.update({
-  id: '/_app/research/',
+  id: '/research/',
   path: '/research/',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppResearchIdRoute = AppResearchIdRouteImport.update({
-  id: '/_app/research/$id',
+  id: '/research/$id',
   path: '/research/$id',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppTasksCreateRoute = AppTasksCreateRouteImport.update({
-  id: '/_app/tasks/create',
+  id: '/tasks/create',
   path: '/tasks/create',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppTasksIdIndexRoute = AppTasksIdIndexRouteImport.update({
-  id: '/_app/tasks/$id/',
+  id: '/tasks/$id/',
   path: '/tasks/$id/',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 const AppTasksIdLiveRoute = AppTasksIdLiveRouteImport.update({
-  id: '/_app/tasks/$id/live',
+  id: '/tasks/$id/live',
   path: '/tasks/$id/live',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => AppRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -218,6 +223,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_app': typeof AppRouteWithChildren
   '/login': typeof LoginRoute
   '/register': typeof RegisterRoute
   '/_app/active-tasks': typeof AppActiveTasksRoute
@@ -301,6 +307,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/_app'
     | '/login'
     | '/register'
     | '/_app/active-tasks'
@@ -329,8 +336,199 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AppRoute: typeof AppRouteWithChildren
   LoginRoute: typeof LoginRoute
   RegisterRoute: typeof RegisterRoute
+}
+
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app': {
+      id: '/_app'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/register': {
+      id: '/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof RegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_app/active-tasks': {
+      id: '/_app/active-tasks'
+      path: '/active-tasks'
+      fullPath: '/active-tasks'
+      preLoaderRoute: typeof AppActiveTasksRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/activity': {
+      id: '/_app/activity'
+      path: '/activity'
+      fullPath: '/activity'
+      preLoaderRoute: typeof AppActivityRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/agents': {
+      id: '/_app/agents'
+      path: '/agents'
+      fullPath: '/agents'
+      preLoaderRoute: typeof AppAgentsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/agents-running': {
+      id: '/_app/agents-running'
+      path: '/agents-running'
+      fullPath: '/agents-running'
+      preLoaderRoute: typeof AppAgentsRunningRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/analytics': {
+      id: '/_app/analytics'
+      path: '/analytics'
+      fullPath: '/analytics'
+      preLoaderRoute: typeof AppAnalyticsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/approvals': {
+      id: '/_app/approvals'
+      path: '/approvals'
+      fullPath: '/approvals'
+      preLoaderRoute: typeof AppApprovalsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/completed-today': {
+      id: '/_app/completed-today'
+      path: '/completed-today'
+      fullPath: '/completed-today'
+      preLoaderRoute: typeof AppCompletedTodayRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/dashboard': {
+      id: '/_app/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof AppDashboardRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/executions': {
+      id: '/_app/executions'
+      path: '/executions'
+      fullPath: '/executions'
+      preLoaderRoute: typeof AppExecutionsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/pending-approvals': {
+      id: '/_app/pending-approvals'
+      path: '/pending-approvals'
+      fullPath: '/pending-approvals'
+      preLoaderRoute: typeof AppPendingApprovalsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/profile': {
+      id: '/_app/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof AppProfileRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/schedules': {
+      id: '/_app/schedules'
+      path: '/schedules'
+      fullPath: '/schedules'
+      preLoaderRoute: typeof AppSchedulesRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/settings': {
+      id: '/_app/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof AppSettingsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/upcoming-today': {
+      id: '/_app/upcoming-today'
+      path: '/upcoming-today'
+      fullPath: '/upcoming-today'
+      preLoaderRoute: typeof AppUpcomingTodayRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/user-guide': {
+      id: '/_app/user-guide'
+      path: '/user-guide'
+      fullPath: '/user-guide'
+      preLoaderRoute: typeof AppUserGuideRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/artifacts/': {
+      id: '/_app/artifacts/'
+      path: '/artifacts'
+      fullPath: '/artifacts/'
+      preLoaderRoute: typeof AppArtifactsIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/artifacts/$id': {
+      id: '/_app/artifacts/$id'
+      path: '/artifacts/$id'
+      fullPath: '/artifacts/$id'
+      preLoaderRoute: typeof AppArtifactsIdRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/research/': {
+      id: '/_app/research/'
+      path: '/research'
+      fullPath: '/research/'
+      preLoaderRoute: typeof AppResearchIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/research/$id': {
+      id: '/_app/research/$id'
+      path: '/research/$id'
+      fullPath: '/research/$id'
+      preLoaderRoute: typeof AppResearchIdRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/tasks/create': {
+      id: '/_app/tasks/create'
+      path: '/tasks/create'
+      fullPath: '/tasks/create'
+      preLoaderRoute: typeof AppTasksCreateRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/tasks/$id/': {
+      id: '/_app/tasks/$id/'
+      path: '/tasks/$id'
+      fullPath: '/tasks/$id/'
+      preLoaderRoute: typeof AppTasksIdIndexRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/_app/tasks/$id/live': {
+      id: '/_app/tasks/$id/live'
+      path: '/tasks/$id/live'
+      fullPath: '/tasks/$id/live'
+      preLoaderRoute: typeof AppTasksIdLiveRouteImport
+      parentRoute: typeof AppRoute
+    }
+  }
+}
+
+interface AppRouteChildren {
   AppActiveTasksRoute: typeof AppActiveTasksRoute
   AppActivityRoute: typeof AppActivityRoute
   AppAgentsRoute: typeof AppAgentsRoute
@@ -355,190 +553,7 @@ export interface RootRouteChildren {
   AppTasksIdIndexRoute: typeof AppTasksIdIndexRoute
 }
 
-declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/register': {
-      id: '/register'
-      path: '/register'
-      fullPath: '/register'
-      preLoaderRoute: typeof RegisterRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/active-tasks': {
-      id: '/_app/active-tasks'
-      path: '/active-tasks'
-      fullPath: '/active-tasks'
-      preLoaderRoute: typeof AppActiveTasksRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/activity': {
-      id: '/_app/activity'
-      path: '/activity'
-      fullPath: '/activity'
-      preLoaderRoute: typeof AppActivityRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/agents': {
-      id: '/_app/agents'
-      path: '/agents'
-      fullPath: '/agents'
-      preLoaderRoute: typeof AppAgentsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/agents-running': {
-      id: '/_app/agents-running'
-      path: '/agents-running'
-      fullPath: '/agents-running'
-      preLoaderRoute: typeof AppAgentsRunningRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/analytics': {
-      id: '/_app/analytics'
-      path: '/analytics'
-      fullPath: '/analytics'
-      preLoaderRoute: typeof AppAnalyticsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/approvals': {
-      id: '/_app/approvals'
-      path: '/approvals'
-      fullPath: '/approvals'
-      preLoaderRoute: typeof AppApprovalsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/completed-today': {
-      id: '/_app/completed-today'
-      path: '/completed-today'
-      fullPath: '/completed-today'
-      preLoaderRoute: typeof AppCompletedTodayRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/dashboard': {
-      id: '/_app/dashboard'
-      path: '/dashboard'
-      fullPath: '/dashboard'
-      preLoaderRoute: typeof AppDashboardRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/executions': {
-      id: '/_app/executions'
-      path: '/executions'
-      fullPath: '/executions'
-      preLoaderRoute: typeof AppExecutionsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/pending-approvals': {
-      id: '/_app/pending-approvals'
-      path: '/pending-approvals'
-      fullPath: '/pending-approvals'
-      preLoaderRoute: typeof AppPendingApprovalsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/profile': {
-      id: '/_app/profile'
-      path: '/profile'
-      fullPath: '/profile'
-      preLoaderRoute: typeof AppProfileRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/schedules': {
-      id: '/_app/schedules'
-      path: '/schedules'
-      fullPath: '/schedules'
-      preLoaderRoute: typeof AppSchedulesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/settings': {
-      id: '/_app/settings'
-      path: '/settings'
-      fullPath: '/settings'
-      preLoaderRoute: typeof AppSettingsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/upcoming-today': {
-      id: '/_app/upcoming-today'
-      path: '/upcoming-today'
-      fullPath: '/upcoming-today'
-      preLoaderRoute: typeof AppUpcomingTodayRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/user-guide': {
-      id: '/_app/user-guide'
-      path: '/user-guide'
-      fullPath: '/user-guide'
-      preLoaderRoute: typeof AppUserGuideRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/artifacts/': {
-      id: '/_app/artifacts/'
-      path: '/artifacts'
-      fullPath: '/artifacts/'
-      preLoaderRoute: typeof AppArtifactsIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/artifacts/$id': {
-      id: '/_app/artifacts/$id'
-      path: '/artifacts/$id'
-      fullPath: '/artifacts/$id'
-      preLoaderRoute: typeof AppArtifactsIdRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/research/': {
-      id: '/_app/research/'
-      path: '/research'
-      fullPath: '/research/'
-      preLoaderRoute: typeof AppResearchIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/research/$id': {
-      id: '/_app/research/$id'
-      path: '/research/$id'
-      fullPath: '/research/$id'
-      preLoaderRoute: typeof AppResearchIdRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/tasks/create': {
-      id: '/_app/tasks/create'
-      path: '/tasks/create'
-      fullPath: '/tasks/create'
-      preLoaderRoute: typeof AppTasksCreateRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/tasks/$id/': {
-      id: '/_app/tasks/$id/'
-      path: '/tasks/$id'
-      fullPath: '/tasks/$id/'
-      preLoaderRoute: typeof AppTasksIdIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/_app/tasks/$id/live': {
-      id: '/_app/tasks/$id/live'
-      path: '/tasks/$id/live'
-      fullPath: '/tasks/$id/live'
-      preLoaderRoute: typeof AppTasksIdLiveRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-  }
-}
-
-const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
-  LoginRoute: LoginRoute,
-  RegisterRoute: RegisterRoute,
+const AppRouteChildren: AppRouteChildren = {
   AppActiveTasksRoute: AppActiveTasksRoute,
   AppActivityRoute: AppActivityRoute,
   AppAgentsRoute: AppAgentsRoute,
@@ -561,6 +576,15 @@ const rootRouteChildren: RootRouteChildren = {
   AppResearchIndexRoute: AppResearchIndexRoute,
   AppTasksIdLiveRoute: AppTasksIdLiveRoute,
   AppTasksIdIndexRoute: AppTasksIdIndexRoute,
+}
+
+const AppRouteWithChildren = AppRoute._addFileChildren(AppRouteChildren)
+
+const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
+  AppRoute: AppRouteWithChildren,
+  LoginRoute: LoginRoute,
+  RegisterRoute: RegisterRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
